@@ -13,6 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+//var usuarioConnectionString = builder.Configuration.GetConnectionString("ConnectionStrings:UsuarioConnection");
 var usuarioConnectionString = builder.Configuration["ConnectionStrings:UsuarioConnection"];
 
 builder.Services.AddDbContext<UsuarioDbContext>(options =>
